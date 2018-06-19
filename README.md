@@ -12,6 +12,8 @@ Demo: [https://keyserver.ntzwrk.org](https://keyserver.ntzwrk.org)
 * [ ] Integrate search into UI (redirects currently to the default results)
 * [ ] `noscript` support
 * [ ] Add tests
+* [ ] Migrate to Angular 6
+* [ ] Migrate to Angular Material
 
 
 ## Installation
