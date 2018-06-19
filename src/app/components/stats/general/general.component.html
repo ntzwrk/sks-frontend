@@ -1,0 +1,34 @@
+<h5>General Server Statistics</h5>
+
+<table *ngIf="stats" class="table table-sm table-responsive">
+  <tbody>
+    <tr>
+      <th>Hostname</th>
+      <td>{{stats.hostName}}</td>
+    </tr>
+    <tr>
+      <th>Nodename</th>
+      <td>{{stats.nodeName}}</td>
+    </tr>
+    <tr>
+      <th>Software</th>
+      <td>{{stats.software}}</td>
+    </tr>
+    <tr>
+      <th>Version</th>
+      <td>{{stats.version}}</td>
+    </tr>
+    <tr>
+      <th>Keys</th>
+      <td>{{stats.keys.toLocaleString()}}</td>
+    </tr>
+    <tr>
+      <th>Contact</th>
+      <td>
+        <a href="http://{{hostName}}/pks/lookup?fingerprint=on&amp;op=index&amp;search={{stats.serverContact}}" target="_blank">
+          {{stats.serverContact}} <i class="fa fa-external-link" aria-hidden="true"></i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,15 @@
+<h3>Submit Your OpenPGP Public Key</h3>
+
+<div class="md-form" style="margin-top: 25px;">
+  <textarea mdbActive type="text" (keyup.enter)="submit()" [(ngModel)]="key" id="upload-form" class="md-textarea"></textarea>
+  <label for="upload-form">Enter Your ASCII-armored OpenPGP Public Key Here</label>
+</div>
+
+<button type="button" (click)="submit()" class="btn btn-primary waves-light" mdbRippleRadius>Submit</button>
+<span id="status" [ngSwitch]="status">
+  <i *ngSwitchCase="availableStatus.waiting" class="fa fa-spinner fa-pulse fa-fw"></i>
+  <i *ngSwitchCase="availableStatus.success" class="fa fa-check fa-fw" style="color: #008000"></i>
+  <i *ngSwitchCase="availableStatus.failure" class="fa fa-times fa-fw" style="color: #C30606"></i>
+
+  <span id="status-message">{{status}}</span>
+</span>

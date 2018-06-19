@@ -1,0 +1,34 @@
+<h2>Statistics for {{hostName}}</h2>
+
+<div *ngIf="stats && humanizedStatsTime; else loading">
+  <p>generated {{humanizedStatsTime}} ago</p>
+
+  <div class="row">
+    <div class="col">
+      <app-stats-general [stats]="stats"></app-stats-general>
+    </div>
+    <div class="col">
+      <app-stats-advanced [stats]="stats"></app-stats-advanced>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <app-stats-stats-pages [hostName]="hostName"></app-stats-stats-pages>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <app-stats-gossip-peers [stats]="stats"></app-stats-gossip-peers>
+    </div>
+    <div class="col">
+      <app-stats-mailsync-peers [stats]="stats"></app-stats-mailsync-peers>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+  <span class="sr-only">Loading...</span>
+</ng-template>

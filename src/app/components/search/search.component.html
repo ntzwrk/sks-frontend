@@ -1,0 +1,8 @@
+<h1><a href="{{scheme}}://{{subDomain}}{{hostName}}">{{subDomain}}<b>{{hostName}}</b></a></h1>
+<h6><a href="http://{{onionServiceUrl}}">{{onionServiceUrl}}</a></h6>
+
+<div class="md-form text-center">
+  <input type="text" (keyup.enter)="search()" [(ngModel)]="query" class="input-alternate" placeholder="Search for a Key, Person or Email Address" autofocus="">
+  <br>
+  <button type="button" (click)="search()" class="btn btn-primary waves-light" mdbRippleRadius>Search</button>
+</div>

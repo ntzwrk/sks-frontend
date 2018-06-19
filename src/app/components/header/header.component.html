@@ -1,0 +1,36 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark primary-color">
+
+  <logo><a class="navbar-brand" routerLink="./">
+    <img src="assets/key-icon-flat.svg" height="32" alt="">
+    OpenPGP Keyserver
+  </a></logo>
+
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link waves-light" routerLink="/search" mdbRippleRadius>
+          <i class="fa fa-search" aria-hidden="true"></i> Search
+        </a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link waves-light" routerLink="/submit" mdbRippleRadius>
+          <i class="fa fa-upload" aria-hidden="true"></i> Submit
+        </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link waves-light" routerLink="/stats" mdbRippleRadius>
+            <i class="fa fa-list" aria-hidden="true"></i> Stats
+          </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link waves-light" routerLink="/graphs" mdbRippleRadius>
+            <i class="fa fa-bar-chart" aria-hidden="true"></i> Graphs
+          </a>
+        </li>
+    </ul>
+  </links>
+
+</mdb-navbar>

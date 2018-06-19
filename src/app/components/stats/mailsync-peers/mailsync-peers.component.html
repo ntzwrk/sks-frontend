@@ -1,0 +1,16 @@
+<h5>Mailsync Peers ({{stats?.mailsyncPeerCount}})</h5>
+
+<table *ngIf="stats?.mailsyncPeerCount > 0; else none" class="table table-sm table-responsive">
+  <thead>
+    <th>Email Address</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let peer of stats.mailsyncPeers">
+      <td>{{peer.address}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #none>
+  <i style="color: grey">none</i>
+</ng-template>

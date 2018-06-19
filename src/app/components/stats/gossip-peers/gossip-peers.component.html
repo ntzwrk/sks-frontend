@@ -1,0 +1,28 @@
+<h5>Gossip Peers ({{stats?.gossipPeerCount}})</h5>
+
+<table *ngIf="stats?.gossipPeerCount > 0; else none" class="table table-sm table-responsive">
+  <thead>
+    <th>Hostname</th>
+    <th>Port</th>
+    <th>Pool Status</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let peer of stats.gossipPeers">
+      <td>
+        <a href="http://{{peer.host}}">
+          {{peer.host}}
+        </a>
+      </td>
+      <td>{{peer.port}}</td>
+      <td>
+        <a href="https://sks-keyservers.net/status/ks-status.php?server={{peer.host}}" target="_blank">
+          link <i class="fa fa-external-link" aria-hidden="true"></i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #none>
+  <i style="color: grey">none</i>
+</ng-template>

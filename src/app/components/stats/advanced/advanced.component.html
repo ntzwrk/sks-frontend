@@ -1,0 +1,26 @@
+<h5>Advanced Server Statistics</h5>
+
+<table *ngIf="stats" class="table table-sm table-responsive">
+  <tbody>
+    <tr>
+      <th>HTTP Port</th>
+      <td>{{stats.httpPort}}</td>
+    </tr>
+    <tr>
+      <th>Recon Port</th>
+      <td>{{stats.reconPort}}</td>
+    </tr>
+    <tr>
+      <th>Debug Level</th>
+      <td>{{stats.debugLevel}}</td>
+    </tr>
+    <tr>
+      <th>Gossip Peers</th>
+      <td>{{stats.gossipPeerCount}}</td>
+    </tr>
+    <tr>
+      <th>Mailsync Peers</th>
+      <td>{{stats.mailsyncPeerCount}}</td>
+    </tr>
+  </tbody>
+</table>
