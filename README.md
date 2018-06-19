@@ -22,7 +22,7 @@ Demo: [https://keyserver.ntzwrk.org](https://keyserver.ntzwrk.org)
 Just download the latest pre-built release from the [releases on GitHub](https://github.com/ntzwrk/sks-frontend/releases), unzip it into a public available directory, edit the config file (in `src/environments/environment.prod.ts`) and have fun.
 
 ### Manual
-Install the project via `yarn install sks-frontend` (or `npm install sks-frontend`) into a local directory, then build it with `ng build --prod`, then proceed as mentioned above.
+Install the project via `yarn add sks-frontend` (or `npm install sks-frontend`) into a local directory, then build it with `ng build --prod`, then proceed as mentioned above.
 
 
 ## Development
