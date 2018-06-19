@@ -8,6 +8,20 @@ install:
 script:
   - yarn run build --prod
 
+before_deploy:
+  - sh ci/before_deploy.sh
+
+deploy:
+  provider: releases
+  file_glob: true
+  file: sks-frontend-$TRAVIS_TAG.*
+  skip_cleanup: true
+  on:
+    tags: true
+  api_key:
+    secure: "BMZkQHt9EnH9kMSLdjqurHil44HN1FCeP/Yo2ONg6ypDDYKXH3YInL0rr9UmZGWK/bcxfQwctc6StQs5SpvlCNa9fvvzJY+G8pK0XWPu1r+BFD8hYY3jL8RWaeQrlvHjLpqBqN2q6akBOv2p28uHTBV+teWKy2vCB9z1InDrOzz0j8JSaPVc0kPddA/bNqoIiBgN39NQoiJkSqEL/zzmQfNqZsIfaeyT3fqUSCREmHiiZ0ducm6kPXLiWvwIoNIULoInPoHk63CaWlz80HeCmEnoQet0ACJAEUbyN+LnxIXtT/Vu3pgNWDSrM5xkYi8X+i6wBOWzrf1Ew2RVxddZmFJCx/iXc3SUxutCYemxu03zt9gWhbeH4VepLbkU651Z6evngekLvDKUmZeTQlY+UvpoYjv5ctKET57SdhRie3VSlYhMbLMybQv8JWH3H2U6dCWOBCjVmY/XxX5BHJdVzlz4xhPqvDGa2sGE31GZYhW64ksZ4SPQfFNKGdVPimNPiRCbOs8yVnWYLPgB1swoLqEQvn075P3R+N2ZgMzt439bX/bVOhrA+oMVSgvIUn9ixOjVC1+7H9e0jmNnRYQrOqe/Am9NgR+h0ifyhflXh42iCcim3RDSVn3u2+aAHGnrXfb3FIplBhoCIORbtOcH4R0AnB8g6tzSSjmIOOKIlbU="
+
+
 cache:
   yarn: true
   directories:
