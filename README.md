@@ -4,6 +4,10 @@
 [![npm package](https://img.shields.io/npm/v/sks-frontend.svg)](https://www.npmjs.com/package/sks-frontend)
 [![npm license](https://img.shields.io/npm/l/sks-frontend.svg)](https://github.com/ntzwrk/sks-frontend/blob/develop/LICENSE.md)
 
+_**Project status: This project will most likely don't get any further development.** I originally started this to learn a little bit Angular, which I really did in the process of developing this. This project is more or less working, but though I think that it's not particularly wise to let a Keyserver frontend in Angular (since static pages work pretty well for that)._
+
+_If you'd like to take this project feel free to contact me._*
+
 `sks-frontend` is an Angular frontend for your SKS (keyserver) to make your keyserver page a little bit prettier.
 Currently supports searching, submitting and statistics. Anti-feature: No `noscript` support.
 
